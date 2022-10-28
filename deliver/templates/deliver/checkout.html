@@ -1,0 +1,136 @@
+{% extends 'product/base.html' %}
+
+{% block title %}
+    checkout
+{% endblock title %}
+
+{% block content %}
+    
+    <section class = "checkout_section">
+        <div class="checkout_information">
+            <form>
+                <div>
+                    <legend>User information:</legend>
+
+                    <label>First Name
+                        <input type="text">
+                    </label>
+                    <label>Last name
+                        <input type="text">
+                    </label>
+                    <label>Company name
+                        <input type="text">
+                    </label>
+                    <label>Contry / Region
+                        <input type="text">
+                    </label>
+                    <label>Street address
+                        <input type="text">
+                        <input type="text">
+                    </label>
+                    <label>Postal code / ZIP
+                        <input type="text">
+                    </label>
+                    <label>Team / City
+                        <input type="text">
+                    </label>
+                    <label>Phone 
+                        <input type="text">
+                    </label>
+                    <label>Email
+                        <input type="text">
+                    </label>
+                </div>
+                
+                <div>
+                    <legend>Additional information</legend>
+                    <label>Order notes (optional)
+                        <input type="text">
+                    </label>
+                </div>
+                <input class="active_btn" type="submit" value="Submit">
+            </form>
+        </div>
+
+
+
+        <div class="checkout_detail">
+
+            <div class="checkout_cart">
+                <table>
+                    <thead>
+                        <tr class="cart_row_title">
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody class="checkout_item">
+                        <tr class="cart_row_content">
+                            <td  >Product name branding</td>
+                            <td class="cart_product_price">$ 88</td>
+                            <td>5</td>
+                            <td>$ 440</td>
+                        </tr>
+
+
+                        <tr class="cart_row_content">
+                            <td>Product name branding</td>
+                            <td class="cart_product_price">$ 88</td>
+                            <td>5</td>
+                            <td>$ 440</td>
+                        </tr>
+
+                        <tr class="cart_row_content">
+                            <td>Product name branding</td>
+                            <td class="cart_product_price">$ 88</td>
+                            <td>5</td>
+                            <td>$ 440</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Cart total</h3>
+                <div class="cart_total">
+                    <h4>Subtotal</h4>
+                    <h4>$ 2000 </h4>
+                </div>
+
+                <div class="cart_total">
+                    <h4>Subtotal</h4>
+                    <h4>$ 2000 </h4>
+                </div>
+            </div>
+
+            <div class = "checkout_coupon">
+                <h3>Have a coupon? click here to enter your coupon code</h3>
+                <div>
+                    <input type="number">
+                    <button class="btn">Apply coupon</button>
+                </div>
+            </div>
+
+            <div class="checkout_payment">
+                <div class="direct_payment">
+                    <input type="radio" name="bank_payment" value="bank_payment">
+                    <label>Direct bank transfer
+                    </label>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda aperiam libero, sapiente numquam</p>
+                </div>
+
+                <div class="delivery_payment">
+                    <input type="radio" name="bank_payment" value="bank_payment">
+                    <label>Cash on delivery
+                    </label>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda aperiam libero, sapiente numquam</p>
+                </div>
+                <button class="active_btn">Place order</button>
+            </div>
+
+        </div>
+    </section>
+
+{% endblock content %}
+    

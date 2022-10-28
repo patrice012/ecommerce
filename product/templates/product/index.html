@@ -1,0 +1,54 @@
+{% extends 'product/base.html' %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block content %}
+
+<header>
+    <h1 class="header_text">Welcome To My Website</h1>
+    <p class="header_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, consequuntur?</p>
+</header>
+
+<section  class="">
+    <div class="branding">
+        <div class='branding_section'>
+            <img src="/static/img/debit-card.svg">
+            <h3>We partner withe the hottest tech companies</h3>
+            <p>We're talking Evernote, MailChing, Depositphotos...just to name a few.
+        </div>
+        <div class='branding_section'>
+            <img src="/static/img/globe-solid.svg">
+            <h3>We partner withe the hottest tech companies</h3>
+            <p>We're talking Evernote, MailChing, Depositphotos...just to name a few.
+        </div>
+        <div class='branding_section'>
+            <img src="/static/img/growth.svg">
+            <h3>We partner withe the hottest tech companies</h3>
+            <p>We're talking Evernote, MailChing, Depositphotos...just to name a few.
+        </div>
+    </div>
+</section>
+
+<section class='top_product'>
+    <h4 class = "little_title" >Top Selling</h4>
+    <h3 class="section_title">Top Products</h3>
+    <div class="divider"></div>
+
+    <div class="product_section">
+    {% for product in product %}
+        {% include 'product/_product_list.html' %}
+    {% endfor %}
+</div>
+<div class="link">
+    <a class="link_btn_light" href="{% url 'product:product_list' %}">View all product</a>
+</div>
+
+</section>
+
+
+
+
+
+{% endblock content %}

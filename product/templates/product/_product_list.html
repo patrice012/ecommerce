@@ -1,0 +1,57 @@
+
+    <div>
+        <a href="{{product.get_absolute_url}}">
+            {% if product.image_url %}
+            <img class="product_list_image" src="{{product.image_url}}" alt = 'product name'>
+            {% endif %}
+        </a>
+        
+        <div class="product_information">
+            <h3 class="product_price">$ {{product.price}}</h3>
+            <a href="{{product.get_absolute_url}}">
+            <h3 class="product_title"> {{product.name|title |truncatechars:30}}</h3>
+            </a>
+            <img class="product_like" src = "/static/img/heart.svg" alt="like">
+        </div>
+        
+
+        <div class="product_action">
+            {% comment %} <form data-product-id = {{product.id}} data-product-name = {{product.name}} class="add_to_cart_btn" action="{% url 'cart:add-to-cart'%}" method="POST">
+                {% csrf_token %}
+                <button class="btn">Add to cart</button>
+            </form> {% endcomment %}
+
+            <a href="{{product.get_absolute_url}}" class="link_btn">View Product
+            </a>
+            {% comment %} <button class="btn">View Product</button> {% endcomment %}
+        </div>
+    </div>
+
+    {% comment %} <div>
+        <img class="product_list_image" src="/static/img/add2.jpg" alt = 'product name'>
+
+        <div class="product_information">
+            <h3 class="product_price">$ 55</h3>
+            <h3 class="product_title"> title for Products</h3>
+            <img class="product_like" src = "/static/img/heart.svg" alt="like">
+        </div>
+        <div class="product_action">
+            <button class="active_btn">Add to cart</button>
+            <button class="btn">wish list</button>
+        </div>
+    </div>
+
+    <div>
+        <img class="product_list_image" src="/static/img/add2.jpg" alt = 'product name'>
+
+        <div class="product_information">
+            <h3 class="product_price">$ 55</h3>
+            <h3 class="product_title"> title for Products</h3>
+            <img class="product_like" src = "/static/img/heart.svg" alt="like">
+        </div>
+        <div class="product_action">
+            <button class="active_btn">Add to cart</button>
+            <button class="btn">wish list</button>
+        </div>
+    </div> {% endcomment %}
+

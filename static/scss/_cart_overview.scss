@@ -1,0 +1,171 @@
+
+.cart__overview {
+    position: relative;
+    display: none;
+    position: fixed;
+    padding: 1rem;
+    border-radius: 6px;
+    right: 0.2%;
+    top: 70px;
+    width: 30%;
+    height: 100%;
+    background-color:$white-color;
+    @extend %contaner-shadow;
+    animation-name: cartEnter;
+    animation-duration: 0.6s;
+    transition: animation-name 0.4s ease-in;
+    z-index: 9;
+}
+
+@keyframes cartEnter {
+    0% {
+        transform: translateX(8rem);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+
+.cart__overview.active {
+    display: block;
+}
+
+.car__overview__container {
+    display: flex;
+    align-items: center;
+    // padding: 0.4rem 0rem;
+    margin: 1rem 0rem;
+    border-bottom: 1px solid rgba(144, 144, 144, 0.737);
+}
+
+.car__overview__container ~ .prod_btn {
+    position: absolute;
+    bottom: 90px;
+    // left: 0;
+    // right: 0;
+    width: 100%;
+    // margin: 0 auto;
+    @extend %flex-center;
+    column-gap: 20px;
+    text-align: center;
+}
+
+// .car__overview__container__grid {
+//     display: grid;
+//     grid-template-columns: 2;
+
+// }
+
+.hidden {
+display: none;
+
+}
+
+#item_picture {
+    width: 20%;
+    height: 12%;
+    @extend %smooth_fading;
+}
+
+.item__description {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.item__name {
+    // font-family: $first-font;
+    font-size: 18px;
+    text-transform:capitalize ;
+}
+
+.item__price,
+.item__quantity {
+    // font-family: $second-font;
+    font-size: 16px;
+}
+
+
+// paginator part
+
+.paginator {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 96px;
+    align-items: center;
+
+    position: absolute;
+    top: 69%;
+}
+
+#previous_items,
+#next_items {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    cursor: pointer;
+    border: 1px solid $blue-heavy;
+    border-radius: 66%;
+}
+
+// empty cart
+
+.emty-cart {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.1rem;
+    color: $blue-heavy;
+}
+
+#shop-url {
+    color: $blue-pure;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+#shop-url:hover {
+    color: $blue-heavy;
+    transform: translateY(5px);
+    transition: all .5s ease-in;
+}
+
+
+
+
+@media (max-width:$tablete-size) {
+    .cart__overview {
+        width:60%;
+        // top:11%;
+    }
+
+    .laptop_cart {
+        display: none;
+    }
+
+    .mobile_cart {
+        display: inline-block;
+        position: relative;
+        right: 120px;
+    }
+}
+
+@media (max-width:$mobile-size) {
+    .cart__overview {
+        width: 100%;
+        // top: 8.9%;
+    }
+
+    .mobile_cart {
+        right: 70px;
+    }
+}

@@ -1,0 +1,131 @@
+{% extends 'dashboard/base.html' %}
+
+{% block sidenavbar %}
+
+{% endblock sidenavbar %}
+
+{% block content %}
+
+{% comment %} <div class="body"> {% endcomment %}
+
+    <div class="profile_container">
+
+        <div class="card  card__left">
+            <div class="card-img">
+            {% comment %} <a href="{{profile.picture_url}}">
+            </a> {% endcomment %}
+            
+            {% if profile.profile_pic %}
+                
+            <img id="profile_image" src="{{profile.picture_url}}" alt="{{profile.name}} picture " />
+            {% endif %}
+                
+            </div>
+            <div class="desc">
+            <h6 class="primary-text">{{profile}}</h6>
+            <h6 class="primary-text">{{profile.user}}</h6>
+            <h6 class="secondary-text">Manager of {{vendor}}</h6>
+            <p class="account-detail">
+                similique odio? Commodi consectetur beatae ullam aperiam quae impedit
+                illo facere at, consequatur dignissimos omnis odit delectus cum
+                nesciunt nulla. Id amet
+            </p>
+            </div>
+            {% if request.user == profile.user %}
+            <a href="{% url 'dashboard:update-profile' %}">
+                <button class="primary-text">Update profile</button>
+            </a>
+            {% endif %}
+            {% comment %} <div class="details">
+
+            <div class="rating">
+                <h6 class="primary-text">{{relate_prod}}</h6>
+                <h6 class="secondary-text">Products</h6>
+            </div>
+            <div class="activity">
+                <h6 class="primary-text">{{sale_prod}}</h6>
+                <h6 class="secondary-text">Pending Products</h6>
+            </div>
+
+
+            <div class="rating">
+                <h6 class="primary-text">86%</h6>
+                <h6 class="secondary-text">Rating</h6>
+            </div>
+            <div class="activity">
+                <h6 class="primary-text">92%</h6>
+                <h6 class="secondary-text">Activity</h6>
+            </div>
+            </div> {% endcomment %}
+        </div>
+
+        <div class="card card__right">
+            {% comment %} <div class="card-img">
+            <img src="{{profile.picture_url}}" alt="profile" />
+            </div>
+            <div class="desc">
+            <h6 class="primary-text">{{user}}</h6>
+            <h6 class="primary-text">@{{user}}_{{profil.name}}</h6>
+            <h6 class="secondary-text">Full Stack Developer</h6>
+            <p class="account-detail">
+                similique odio? Commodi consectetur beatae ullam aperiam quae impedit
+                illo facere at, consequatur dignissimos omnis odit delectus cum
+                nesciunt nulla. Id amet
+            </p>
+            </div>
+            <a href="{% url 'profile:profile' %}">
+            <button class="primary-text">View profile</button>
+            </a> {% endcomment %}
+            <div class="details">
+
+            <div class="account_dash">
+                <div class="rating">
+                <h6 class="primary-text">{{relate_prod}}</h6>
+                <h6 class="secondary-text">Products</h6>
+                </div>
+                <div class="activity">
+                <h6 class="primary-text">{{pending_prod}}</h6>
+                <h6 class="secondary-text">Pending Products</h6>
+
+                
+                </div>
+
+                <div class="activity">
+                <h6 class="primary-text">86%</h6>
+                <h6 class="secondary-text">Rating</h6>
+                </div>
+            </div>
+
+            <div class="account_dash">
+                <div class="rating">
+                <h6 class="primary-text">{{success_prod}}</h6>
+                <h6 class="secondary-text">Sale products</h6>
+                </div>
+                <div class="activity">
+                <h6 class="primary-text">{{not_process_prod}}</h6>
+                <h6 class="secondary-text">Available Products</h6>
+
+                
+                </div>
+
+                <div class="activity">
+                    <h6 class="primary-text">92%</h6>
+                <h6 class="secondary-text">Activity</h6>
+                </div>
+            </div>
+
+            {% comment %} <div class="account_dash">
+            <div class="rating">
+                <h6 class="primary-text">86%</h6>
+                <h6 class="secondary-text">Rating</h6>
+            </div>
+            <div class="activity">
+                <h6 class="primary-text">92%</h6>
+                <h6 class="secondary-text">Activity</h6>
+            </div>
+            </div> {% endcomment %}
+
+        </div>
+    </div>
+{% comment %} </div> {% endcomment %}
+{% endblock content %}

@@ -1,0 +1,47 @@
+{% extends 'product/base.html' %}
+
+
+{% block content %}
+
+
+<section class='top_product search__container'>
+    
+    {% if search_by_name %}
+        <h4 class = "little_title" style="margin-top:60px" >Terms of seach: {{query}}</h4>
+        <h3 class="section_title">Search by <span class="search_type"> {{title_name}} </span></h3>
+        <div class="divider"></div>
+
+        <div class="product_section search__content">
+        {% for product in search_by_name %}
+            {% include 'product/_product_list.html' %}
+        {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if search_by_price %}
+        <h4 class = "little_title" style="margin-top:60px" >Terms of seach: {{query}}</h4>
+        <h3 class="section_title">Search by <span class="search_type"> {{title_price}} </span></h3>
+        <div class="divider"></div>
+
+        <div class="product_section search__content">
+        {% for product in search_by_price %}
+            {% include 'product/_product_list.html' %}
+        {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if search_by_author %}
+        <h4 class = "little_title" style="margin-top:60px" >Terms of seach: {{query}}</h4>
+        <h3 class="section_title">Search by <span class="search_type"> {{title_author}} </span></h3>
+        
+        <div class="divider"></div>
+
+        <div class="product_section search__content">
+        {% for product in search_by_author %}
+            {% include 'product/_product_list.html' %}
+        {% endfor %}
+        </div>
+    {% endif %}
+</section>
+
+{% endblock content %}

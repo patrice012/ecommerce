@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    // object-fit: cover;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $black-color;
+}
+
+body {
+    font-size: 16px;
+    // max-width: 100vw;
+}
+
+.divider {
+    width: 150px;
+    margin: 20px auto 10px auto;
+    border-bottom: 2px solid $blue-pure;
+    border-radius: 10px;
+}
+
+button {
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    // width: 10em;
+    width: auto;
+    cursor: pointer;
+}
+
+
+.active_btn {
+    background-color: $black-color;
+    color: $white-color;
+    border: 1px solid $white-color;
+}
+
+.active_btn:hover {
+    background-color: $white-color;
+    color: $black-color;
+    border: 1px solid $black-color;
+    transition: all .3s ease-in;
+    
+}
+
+.btn {
+    border: 1px solid $black-color;
+    color: $black-color;
+    background-color: transparent;
+}
+
+.btn:hover {
+    border: 1px solid $white-color;
+    color: $white-color;
+    background-color: $black-color;
+    transition: all .3s ease-in;
+    
+}
+
+input[type="submit"] {
+    padding: .5rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+// @media (max-width:1080px) {
+//     button {
+//         font-size: 14px;
+//         padding: 0.5rem 1.5rem;
+//     }
+// }
+
+// error config
+
+.errorlist {
+    color: red;
+    font-size: .91rem;
+    margin-top: .3rem;
+}
+
+.nonfield {
+    text-align: center;
+    margin-bottom: 0;
+}

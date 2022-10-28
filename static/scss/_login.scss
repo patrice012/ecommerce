@@ -1,0 +1,115 @@
+
+.auth {
+    width: 380px;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    @extend %contaner-shadow;
+    
+}
+
+.auth > h2 {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 1rem 0rem 2.6rem;
+    // line-height: 1.1rem;
+}
+
+.auth > form {
+    height: 100%;
+    position: relative;
+    top: 20px;
+}
+
+form > .form__control  {
+    width: 100%;
+    @extend %flex-center;
+    // align-items: flex-start;
+    flex-direction: column;
+    margin: 2.4rem 0rem;
+}
+
+.form__control > input {
+    border: none;
+    border-bottom: 2px solid $black-color;
+    outline: none;
+    height: 40px;
+    width: 90%;
+    font-size: 1.2rem;
+}
+
+.form__control > input::placeholder {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    color: $black-color;
+}
+
+.form__control > label {
+    position: absolute;
+    left: 38px;
+    // bottom: 60%;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.form__btn {
+    width: 93%;
+    position: absolute;
+    // bottom: -20px;
+    margin-top: 30px;
+    left: 10px;
+}
+
+.auth__login {
+    margin: 1.2rem 0rem;
+    width: 100%;
+}
+
+.auth__text {
+    font-size: 1.1rem;
+    color: $black-color;
+    margin: .6rem 0rem;
+}
+
+.auth__text > a {
+    color: $blue-pure;
+    text-decoration: underline;
+    margin-left: 6px;
+}
+
+// @media (max-width:$tablete-size) {
+//     .auth {
+//         width: 60%;
+//         height: calc(40vh + 100px);
+//     }
+// }
+
+@media (max-width:$mobile-size) {
+    .auth {
+        width: 90%;
+        height: calc(60vh + 100px);
+    }
+
+    .auth > h2 {
+        font-size: 1.6rem;
+    }
+
+    form > .form__control  {
+        margin: 2rem 0rem;
+    }
+
+    .form__control > input {
+        font-size: 1rem;
+    }
+
+    .form__control > input::placeholder {
+        font-size: 1.1rem;
+    }
+}
+
+// .form__control > input 

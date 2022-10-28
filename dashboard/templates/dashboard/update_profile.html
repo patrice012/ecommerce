@@ -1,0 +1,60 @@
+{% extends 'dashboard/base.html' %}
+
+{% comment %} 
+{% block sidenavbar %}
+    
+{% endblock sidenavbar %} {% endcomment %}
+    
+
+
+{% block content %}
+<div class="profile_information">
+    <form action = '' method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="profile__form">
+            {{form.non_field_errors}}
+            <legend>Profile information:</legend>
+            {% for field in form  %}
+            <label>{{field.label}}
+                    {{field.errors}}
+                    {{field}}
+                </label>
+            
+            {% endfor %}
+            {% comment %} <label>Phone number
+                {{form.phone}}
+            </label>
+            <label>Email address
+                {{form.email}}
+            </label>
+            <label>Born date
+                {{form.born_date}}
+            </label>
+            <label>Profile picture
+                {{form.profile_pic}}
+            </label>
+            <label>Location
+                {{form.location}}
+            </label>
+            <label>City
+                {{form.city}}
+            </label>
+            <label>State
+                {{form.state}}
+            </label> {% endcomment %}
+            {% comment %} <label>Email
+                <input type="text">
+            </label> {% endcomment %}
+        </div>
+        
+        <div class ="profile__form">
+            <legend>Additional information</legend>
+            <label>Say something about you...(optional)
+                <input type="text">
+            </label>
+        </div>
+        <input class="active_btn" type="submit" value="Submit">
+    </form>
+</div>
+{% endblock content %}
+    

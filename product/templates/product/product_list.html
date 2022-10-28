@@ -1,0 +1,18 @@
+
+{% extends 'product/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class='list_product top_product'>
+    <h4 class = "little_title" >Top Selling</h4>
+    <h3 class="section_title">Top Products</h3>
+    <div class="divider"></div>
+
+    <div class="product_section">
+    {% for product in product_list %}
+        {% include 'product/_product_list.html' %}
+    {% endfor %}
+    </div>
+</section>
+{% include 'product/_paginator.html' %}
+{% endblock content %}

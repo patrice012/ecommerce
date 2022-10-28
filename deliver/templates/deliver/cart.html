@@ -1,0 +1,93 @@
+{% extends 'product/base.html' %}
+
+{% block title %}
+    Cart
+{% endblock title %}
+
+{% block content %}
+    
+
+    <section class="cart_section">
+        <div class='cart_container'>
+            <div class="cart_info">
+                <h2>Did yout find everything you need?</h2>
+
+                <ul class="cart_ul">
+                    <li class="cart_li">
+                        <h3>Free express shipping</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda aperiam libero, sapiente numquam</p>
+                    </li>
+
+                     <li class="cart_li">
+                        <h3>Free express shipping</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda aperiam libero, sapiente numquam</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cart">
+                <table>
+                    <thead>
+                        <tr class="cart_row_title">
+                            <th></th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr class="cart_row_content">
+                            <td> <img class="cart_image" src="/static/img/BackgroundEraser_20220730_143008349.png" alt="product_name"></td>
+                            <td>Product name branding</td>
+                            <td class="cart_product_price">$ 88</td>
+                            <td>5</td>
+                            <td>$ 440</td>
+                        </tr>
+
+
+                        <tr class="cart_row_content">
+                            <td> <img class="cart_image" src="/static/img/BackgroundEraser_20220730_143008349.png" alt="product_name"></td>
+                            <td>Product name branding</td>
+                            <td class="cart_product_price">$ 88</td>
+                            <td>5</td>
+                            <td>$ 440</td>
+                        </tr>
+
+                        <tr class="cart_row_content">
+                            <td> <img class="cart_image" src="/static/img/BackgroundEraser_20220730_143008349.png" alt="product_name"></td>
+                            <td>Product name branding</td>
+                            <td class="cart_product_price">$ 88</td>
+                            <td>5</td>
+                            <td>$ 440</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class = "coupon">
+                    <input type="number">
+                    <button class="btn">Apply coupon</button>
+                </div>
+
+                <h3>Cart total</h3>
+                <div class="cart_total">
+                    <h4>Subtotal</h4>
+                    <h4>$ 2000 </h4>
+                </div>
+
+                <div class="cart_total">
+                    <h4>Subtotal</h4>
+                    <h4>$ 2000 </h4>
+                </div>
+
+                <button class="active_btn">Proceed Checkout</button>
+            </div>
+
+            
+        </div>
+
+    </section>
+
+{% endblock content %}
+    

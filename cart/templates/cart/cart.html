@@ -1,0 +1,102 @@
+{% extends 'product/base.html' %}
+
+{% block title %}
+    Cart
+{% endblock title %}
+
+{% block content %}
+    
+
+    <section class="cart_section">
+        <div class='cart_container'>
+            <div class="cart_info">
+                <h2>Did yout find everything you need?</h2>
+
+                <ul class="cart_ul">
+                    <li class="cart_li">
+                        <h3>Free express shipping</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda aperiam libero, sapiente numquam</p>
+                    </li>
+
+                     <li class="cart_li">
+                        <h3>Free express shipping</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda aperiam libero, sapiente numquam</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cart">
+                
+                <table>
+                    <thead>
+                        <tr class="cart_row_title">
+                            <th></th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th></th>
+                            
+                            <th>Subtotal</th>
+                            {% comment %} <th>Total</th> {% endcomment %}
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        {% for cart_product in cart_item %}
+                        <tr class="cart_row_content">
+                            <td><a href="{{cart_product.product.get_absolute_url}}">
+                                <img class="cart_image" src="{{cart_product.product.image_url}}" alt="product_name">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{cart_product.product.get_absolute_url}}">
+                                    {{cart_product.product.name}}
+                                </a>
+                            </td>
+                            <td class="cart_product_price">$ {{cart_product.product.price}}</td>
+                            <td>{{cart_product.product_quantity}}</td>
+
+
+                            <td class='form_action'>
+                                <form class="cart_action" action='{% url "cart:cart_action" %}' method="POST">
+                                    {% csrf_token %}
+                                    <button data-product-id = {{cart_product.product.id}} data-product-name={{cart_product.product.name}}  class="increase" name="increase">↑
+                                    </button>
+                                    <button data-product-id = {{cart_product.product.id}} data-product-name={{cart_product.product.name}}  class="decrease" name="decrease">↓
+                                    </button>
+                                </form>
+
+                            </td>
+                            {% comment %} <td>$ {{cart_product.product.price}}</td> {% endcomment %}
+                            <td>$ {{cart_product.cart_item_total_cost}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <form class = "user_input" action='.' method="POST">
+                    <input type="number">
+                    <button class="btn">Apply coupon</button>
+                </form>
+
+                <h3>Cart total</h3>
+                <div class="cart_total">
+                    <h4>Subtotal</h4>
+                    <h4 id="cart_subtotal">$ {{cart.cart_total_cost}} </h4>
+                </div>
+
+                <div class="cart_total">
+                    <h4>Total</h4>
+                    <h4 id="cart_total">$ 1988 </h4>
+                </div>
+
+                <a class="link_btn" href='{% url "checkout:checkout" %}'>Proceed Checkout</a>
+                {% comment %} <button class="active_btn">Proceed Checkout</button> {% endcomment %}
+            </div>
+
+            
+        </div>
+
+    </section>
+
+{% endblock content %}

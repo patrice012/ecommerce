@@ -1,0 +1,37 @@
+
+<div class="cart__overview">
+    {% for item in context_cart_item %}
+        <div class="car__overview__container"> 
+            <img id="item_picture" src="{{item.product.image_url}}" >
+
+            <div class="item__description">
+                <h2 class="item__name">{{item.product.name|truncatechars:15}} 
+
+                    
+                </h2>
+                <p class="item__quantity">x {{ item.product_quantity }}
+                  
+                </p>
+
+                <p class="item__price">
+                    $ {{item.product.price}}
+                </p>
+            </div>
+            
+        </div>
+    {% endfor%}
+
+    <div class="paginator">
+        <img id="previous_items" src='/static/img/go-previous-skip.svg' alt=''>
+        <img id="next_items" src='/static/img/go-next-skip.svg' alt=''>
+    </div>
+
+    <div class='prod_btn'>
+        <a class="link_btn_light" href="{% url 'checkout:checkout' %}">Checkout</a>
+        <a class="link_btn" href="{% url 'cart:cart' %}">Manage cart</a>
+    </div>
+</div>
+
+
+
+

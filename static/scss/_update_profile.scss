@@ -1,0 +1,47 @@
+
+.profile_information {
+    width: 60vw;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+.profile_information > form {
+    width: 100%;
+    // min-height: auto;
+}
+
+.profile__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    margin: 2rem 0rem 4rem 0rem;
+    padding: 3rem 0rem;
+    @extend %contaner-shadow;
+}
+
+@media (max-width:$tablete-size) {
+    .profile_information {
+        width: 80vw;
+    }
+}
+
+@media (max-width:$mobile-size) {
+    .profile_information {
+        width: 100vw;
+    }
+
+    .profile__form {
+        margin : 0rem 0rem 02rem 0;
+    }
+
+    .profile__form label {
+        margin-left : 0;
+    }
+
+    // .profile_information input {
+    //     display: block;
+    //     padding : 3rem 6rem;
+    // }
+}

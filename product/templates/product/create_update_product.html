@@ -1,0 +1,60 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+    <div class="profile_information">
+        <form action = '' method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="profile__form">
+                {{ form.non_field_errors }}
+                <legend>{{title}}:</legend>
+                {% for field in form %}
+                    <label>{{field.label}}
+                        {% comment %} {{field.name}} {% endcomment %}
+                        {{ field.errors }}
+                        {{field}}
+                        {% if field.help_text %}
+                            <p class="help">{{ field.help_text|safe }}</p>
+                        {% endif %}
+                    </label>
+                {% endfor %}
+                {% comment %} <label>{{form.price.label}}
+                    {{form.price}}
+                </label>
+                <label>{{form.discount_price.label}}
+                    {{form.discount_price}}
+                </label>
+                <label>{{form.quantity_in_stock.label}}
+                    {{form.quantity_in_stock}}
+                </label>
+                <label>{{form.product_type.label}}
+                    {{form.product_type}}
+                </label>
+                <label>{{form.product_image.label}}
+                    {{form.product_image}}
+                </label>
+                <label>{{form.available.label}}
+                    {{form.available}}
+                </label>
+                <label>{{form.short_description.label}}
+                    {{form.short_description}}
+                </label>
+                <label>{{form.long_description.label}}
+                    {{form.long_description}}
+                </label> {% endcomment %}
+
+                {% comment %} <label>Email
+                    <input type="text">
+                </label> {% endcomment %}
+            </div>
+            
+            {% comment %} <div class ="profile__form">
+                <legend>Additional information</legend>
+                <label>Say something about you...(optional)
+                    <input type="text">
+                </label>
+            </div> {% endcomment %}
+            <input class="active_btn" type="submit" value="Submit">
+        </form>
+    </div>
+{% endblock content %}
+    

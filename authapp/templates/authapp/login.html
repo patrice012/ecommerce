@@ -1,0 +1,37 @@
+
+{% extends 'authapp/base.html' %}
+
+{% block title %}
+    Login
+{% endblock title %}
+
+{% block content %}
+    <div class="auth">
+        <h2>Please Login</h2>
+        <form class="form" method="POST" action="">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class="form__control">
+                {{form.email.errors}}
+                {{form.email}}
+                {% comment %} <input type="email" required="" autofocus  placeholder="Email"> {% endcomment %}
+                {% comment %} <label id="">Email</label> {% endcomment %}
+            </div>
+
+            <div class="form__control">
+                {{form.password.errors}}
+                {{form.password}}
+                {% comment %} <input type="password" required placeholder="Password"> {% endcomment %}
+                {% comment %} <label id="">Password</label> {% endcomment %}
+            </div>
+            <div class="form__btn">
+                <button class="auth__login active_btn">Login</button>
+                <p class="auth__text">
+                    Don't have an account?
+                    <a href="{% url 'authapp:register' %}">Register</a>
+                </p>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
+    

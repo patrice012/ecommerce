@@ -1,0 +1,40 @@
+
+
+%contaner-shadow {
+    box-shadow:0px .8px 20px .18px $box-shadow-color;
+    border-radius: 10px;
+
+    // box-shadow: .6px 4px 12px 0.1px $box-shadow-color;
+}
+
+%input {
+    border: 1px solid $black-color;
+    border-radius: 10px;
+    padding: 0px 8px;
+    outline: none;
+}
+
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+%smooth_fading {
+    animation-name: smooth_feding;
+    animation-duration: 1.2s;
+    // animation-fill-mode: forwards;
+}
+
+@keyframes smooth_feding {
+    0% {
+        transform: skew(0,0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: skew(1,1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,172 @@
+
+.profile_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    // background: url("/static/img/background.png") no-repeat center center fixed;
+    // background-size: cover;
+}
+
+.card {
+    height:auto;
+    min-height: 520px;
+    width: 400px;
+    // background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    margin: auto;
+    border-radius: 8px;
+    // box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+    @extend %contaner-shadow;
+    font-family: "Poppins", system-ui, -apple-system, 'Segoe UI', Ubuntu,;
+    }
+
+
+
+
+.card__left {
+    border:3px solid #e92f7b;
+    // position: absolute;
+    // left: 12%;
+    // right: auto;
+    // top: 0;
+    // bottom: 0;
+}
+
+.card__right {
+    border: 3px solid  #0f82f8;
+    // position: absolute;
+    // left: auto;
+    // right:12%;
+    // top: 0;
+    // bottom: 0;
+}
+
+
+.card-img {
+    height: 140px;
+    width: 140px;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    margin: 30px auto 20px auto;
+    border-radius: 50%;
+}
+.card-img img {
+    height: 100%;
+    border-radius: 50%;
+    margin-left: 7%;
+    margin-top: 7%;
+    cursor: pointer;
+}
+.desc {
+    width: 100%;
+    text-align: center;
+
+}
+.primary-text {
+    color: $black-color;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    margin: 5px 0;
+}
+
+button.primary-text {
+    border: 1px solid rgba(0, 0, 0, 0.266);
+    background-color: $black-color;
+    color: $white-color;
+    padding: 0.8rem 2rem;
+    width: 80%;
+    border-radius: 8px;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150%); */
+    margin: 1rem 0rem 1rem 2.2rem;
+    cursor: pointer;
+}
+
+button.primary-text:hover {
+    border: 1px solid $black-color;
+    background-color: rgba(255, 255, 255, 0.097);
+    color: $black-color;
+    transition: all .3s ease;
+}
+
+.secondary-text {
+    color: $black-color;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.secondary-text:hover {
+    color: #e92f7b;
+    transition: color 0.3s ease-in;
+}
+
+.account-detail {
+    color: $black-color;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: justify;
+    padding: 0px 22px;
+    margin: 20px 10px;
+
+}
+
+.details {
+    width: 100%;
+    min-height:100%;
+    display: grid;
+    /* height: 70px; */
+    grid-template-columns: auto auto;
+    /* position: absolute;
+    bottom: 0; */
+    backdrop-filter: blur(20px);
+    border-radius: 0 0 8px 8px;
+    padding: 5px 0;
+
+}
+    /* .details > div {
+    text-align: center;
+    }
+    .details > div:first-child {
+    border-right: 2px solid rgba(255, 255, 255, 0.08);
+    } */
+
+.account_dash {
+    text-align: center;
+}
+
+.details > .account_dash:first-child {
+  border-right: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.rating, .activity {
+padding: 20px 0px;
+
+}
+
+
+@media (max-width:$tablete-size) {
+    .card {
+        margin: auto 30px;
+    }
+}
+
+@media (max-width:$mobile-size) {
+
+    .profile_container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card {
+        max-width: 100%;
+        margin: 30px 30px;
+    }
+}

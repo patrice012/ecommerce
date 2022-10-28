@@ -1,0 +1,106 @@
+{% extends 'product/base.html' %}
+
+{% block title %}
+    checkout
+{% endblock title %}
+
+{% block content %}
+
+<form action="{% url 'checkout:checkout' %}" method="POST">
+    <section class = "checkout_section">
+            {% csrf_token %}
+            <div class="checkout_information">
+                    <div>
+                        <legend>User information:
+                        </legend>
+                        {% for field in form %}
+                        <label>{{field.label}}
+                            {{field}}
+                        </label>
+                        {% endfor %}
+                    </div>
+                    
+                    <div>
+                        <legend>Additional information</legend>
+                        <label>Order notes (optional)
+                        </label>
+                        <textarea name="order_notes" rows = 5 cols = 70 style='width: 419px;
+height: 106px; margin-top:10px'></textarea>
+                            {% comment %} <input type="text"> {% endcomment %}
+                    </div>
+                    {% comment %} <input class="active_btn checkout_btn" type="submit" value="Submit"> {% endcomment %}
+                {% comment %} </form> {% endcomment %}
+            </div>
+
+
+
+            <div class="checkout_detail">
+
+                <div class="checkout_cart">
+                    <table>
+                        <thead>
+                            <tr class="cart_row_title">
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody class="checkout_item">
+                            {% for item in cart_item %}
+                                <tr class="cart_row_content">
+                                    <td  >{{item.product.name|title}}</td>
+                                    <td class="cart_product_price">$ {{item.product.price}}</td>
+                                    <td>{{item.product_quantity}}</td>
+                                    <td>$ {{item.cart_item_total_cost}}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <h3>Cart total</h3>
+                    <div class="cart_total">
+                        <h4>Subtotal</h4>
+                        <h4>$ {{cart.cart_total_cost}} </h4>
+                    </div>
+
+                    <div class="cart_total">
+                        <h4>Subtotal</h4>
+                        <h4>$ 2000 </h4>
+                    </div>
+                </div>
+
+                <div class = "checkout_coupon">
+                    <h3>Have a coupon? click here to enter your coupon code</h3>
+                    <div>
+                        <input type="number">
+                        <button class="btn">Apply coupon</button>
+                    </div>
+                </div>
+
+                <div  class="checkout_payment">
+                    <div class="direct_payment">
+                        <input  id="payment" type="radio" name="payment" value="bank">
+                        <label for='payment' >Direct bank transfer
+                        </label>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda aperiam libero, sapiente numquam</p>
+                    </div>
+
+                    {% comment %}  change his so user can selecte just one thing {% endcomment %}
+                    <div class="delivery_payment">
+                        <input id="payment" type="radio" name="payment" value="delivery">
+                        <label>Cash on delivery
+                        </label>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda aperiam libero, sapiente numquam</p>
+                    </div>
+                    <button class="active_btn order_btn">Place order</button>
+                </div>
+                
+            </div>
+        </section>
+    </form>
+
+<script src="/static/js/checkout.js"></script>
+
+{% endblock content %}
+    

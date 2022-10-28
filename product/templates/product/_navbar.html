@@ -1,0 +1,65 @@
+
+
+<nav id = 'nav' data-user = {{request.user}}>
+    <div>
+        <a href="{% url 'product:home' %}">
+            <img src="/static/img/pie-chart.svg" id ="logo" alt="" />
+        </a>
+    </div>
+
+     <form class="search " method = "GET" action="{% url 'product:search' %}">
+        <input type="search" name="q" class="search_input" placeholder="Search...">
+        <img src="/static/img/search.svg" class="fas fa-search search_btn">
+    </form>
+
+    <button class = "cart_item_link nav_link">
+        <span class="cart_item_number"></span>
+        <img class="nav_link__icon" src="/static/img/shopping-cart.svg">
+    </button>
+
+     <span class="profile_icon">
+        <a class = " nav_link" href = "{% url 'dashboard:dashboard' %}">
+            <img id="profile__icon" class="nav_link__icon" src="/static/img/moncomptemobile.png">
+        </a>
+        {% comment %} <span id="overview">hello</span> {% endcomment %}
+    </span>
+    
+    <ul class="mobile nav_links">
+        <li>
+            <a class = "nav_link" href = "{% url 'product:product_list' %}">Shop</a>
+        </li>
+        <li>
+            <a class = "nav_link" href = "#">About</a>
+        </li>
+        <li>
+            <a class = "nav_link" href = "#">Contact</a>
+        </li>
+
+        {% comment %} <li class="cart_item_link laptop_cart">
+            <button class = " nav_link">
+                <span class="cart_item_number"></span>
+                <img class="nav_link__icon" src="/static/img/shopping-cart.svg">
+            </button>
+        </li> {% endcomment %}
+
+        {% comment %} <li>
+            <a class = " nav_link" href = "{% url 'dashboard:dashboard' %}">
+                <img id="profile__icon" class="nav_link__icon" src="/static/img/moncomptemobile.png">
+            </a>
+        </li> {% endcomment %}
+
+        {% comment %} <form class="search laptop_search" method = "GET" action="{% url 'product:search' %}">
+            <input type="search" name="q" class="search_input" placeholder="Search...">
+            <img src="/static/img/search.svg" class="fas fa-search search_btn">
+        </form> {% endcomment %}
+
+    </ul>
+</nav>
+
+<div class="box ">
+    <div class="contLigne btn1">
+        <div class="lignes"></div>
+        <div class="lignes"></div>
+        <div class="lignes"></div>
+    </div>
+</div>

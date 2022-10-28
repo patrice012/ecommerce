@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}user{% endblock title %}
+    </title>
+    <link rel="stylesheet" href="{% static 'scss/main.css' %}" />
+</head>
+<body>
+
+    {% include 'product/_messages.html' %}
+    {% include 'product/_modal.html' %}
+    <div class = "dashboard">
+        {% block sidenavbar %}
+            <nav class="side__navbar">
+                <div class="user__information">
+                    
+                    {% if request.user.profile.profile_pic %}
+                        <img src="{{request.user.profile.picture_url}}">
+                    {% endif %}
+                        
+                        
+                        
+                    <div>
+                        <h3>{{user}}</h3>
+                        <h5>{{user.email}}</h5>
+                    </div>
+                </div>
+                <ul class="dash_nav">
+                    <li class="">
+                        <img class="nav_link__icon" src="/static/img/user.svg">
+                        <a class = "nav_link" href = "{% url 'dashboard:profile' %}">Profile</a>
+                    </li>
+                    <li class="active">
+                        <img class="nav_link__icon" src="/static/img/add.svg">
+                        <a class = "nav_link" href = "{% url 'product:create-product' %}">Add product</a>
+                    </li>
+                    <li class="">
+                        <img class="nav_link__icon" src="/static/img/24-hours.svg">
+                        <a class = "nav_link" href = "#">Last action</a>
+                    </li>
+                    <li class="">
+                        <img class="nav_link__icon" src="/static/img/home.svg">
+                        <a class = "nav_link" href = "/">View site</a>
+                    </li>
+                    <li class="">
+                        <img class="nav_link__icon" src="/static/img/globe-solid.svg">
+                        <a class = "nav_link" href = "#">Service</a>
+                    </li>
+                    <li class="">
+                        <img class="nav_link__icon" src="/static/img/growth.svg">
+                        <a class = "nav_link" href = "#">Product rate</a>
+                    </li>
+                    <li class="">
+                        <img class="nav_link__icon" src="/static/img/exportation.svg">
+                        <a class = "nav_link" href = "#">Export product detail</a>
+                    </li>
+
+                    <li class="">
+                        <img class="nav_link__icon" src="/static/img/heart.svg">
+                        <a class = "nav_link" href = "#">Wish List</a>
+                    </li>
+                    <li class="">
+                        <img class="nav_link__icon" src="/static/img/icon_lock.svg">
+                        <a class = "nav_link" href = "#">Change password</a>
+                    </li>
+                </ul>
+
+                <div class="dash__logout">
+                    <img class="nav_link__icon" src="/static/img/arrow_carrot_right.svg">
+                    <a class = "nav_link" href = "#">
+                        logout
+                    </a>
+                </div>
+            </nav> 
+        {% endblock sidenavbar %}
+        
+        {% block content %}
+        
+        {% endblock content %}
+    </div>
+
+     <script src='/static/js/dashboard.js'>
+    </script>
+    {% comment %} <script src='/static/js/animation_background.js'>
+    </script> {% endcomment %}
+</body>
+</html>

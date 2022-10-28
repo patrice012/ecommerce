@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}delivery app{% endblock title %}
+    </title>
+    {% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'scss/main.css' %}" />
+    {% endblock stylesheet %}
+</head>
+<body>
+    
+    {% include 'product/_navbar.html' %}
+
+    {% include 'cart/_cart_overview.html' %}
+
+    {% include 'product/_messages.html' %}
+    {% block content %}
+    {% endblock content %}
+
+    {% block javascript %}
+    <script src='{% static "js/deliver.js" %}'>
+    </script>
+    <script src='{% static "js/modal.js" %}'>
+    </script>
+    <script src='{% static "js/product.js" %}'>
+    </script>
+    <script src="{% static 'js/cart.js' %}" defer>
+    </script>
+    {% endblock javascript %}
+</body>
+</html>
