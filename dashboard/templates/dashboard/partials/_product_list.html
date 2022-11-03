@@ -1,0 +1,7 @@
+<div class="" style='display:flex; flex-wrap:wrap; margin:0 auto;'>
+    {% for product in product_list %}
+        {% include 'product/_product_list.html' %}
+        {% comment %} <a href="{% url 'dashboard:dash_detail' product.id %}" class="link_btn">View Product
+        </a> {% endcomment %}
+    {% endfor %}
+</div>

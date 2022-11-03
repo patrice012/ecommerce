@@ -1,0 +1,64 @@
+ <nav class="side__navbar">
+    <div class="user__information">
+        
+        {% if request.user.profile.profile_pic %}
+            <img src="{{request.user.profile.picture_url}}">
+        {% endif %}
+            
+
+        <div>
+            <h3>{{user}}</h3>
+            <h5>{{user.email}}</h5>
+        </div>
+    </div>
+    <ul class="dash_nav">
+        <li class="active">
+            <img class="nav_link__icon" src="/static/img/user.svg">
+            <a class = "nav_link" hx-get = "{% url 'dashboard:profile' %}" hx-target ='#dash__content' hx-trigger='click'>Profile</a>
+        </li>
+        <li class="">
+            <img class="nav_link__icon" src="/static/img/add.svg">
+            <a class = "nav_link" hx-get = "{% url 'product:create-product' %}" hx-target ='#dash__content'>Add product</a>
+        </li>
+         <li class="">
+            <img class="nav_link__icon" src="/static/img/add.svg">
+            <a class = "nav_link" hx-get = "{% url 'dashboard:dash_list' %}" hx-target ='#dash__content'>Views products</a>
+        </li>
+        <li class="">
+            <img class="nav_link__icon" src="/static/img/24-hours.svg">
+            <a class = "nav_link" href = "#">Last action</a>
+        </li>
+        <li class="">
+            <img class="nav_link__icon" src="/static/img/home.svg">
+            <a class = "nav_link" href = "/">View site</a>
+        </li>
+        <li class="">
+            <img class="nav_link__icon" src="/static/img/globe-solid.svg">
+            <a class = "nav_link" href = "#">Service</a>
+        </li>
+        <li class="">
+            <img class="nav_link__icon" src="/static/img/growth.svg">
+            <a class = "nav_link" href = "#">Product rate</a>
+        </li>
+        <li class="">
+            <img class="nav_link__icon" src="/static/img/exportation.svg">
+            <a class = "nav_link" href = "#">Export product detail</a>
+        </li>
+
+        <li class="">
+            <img class="nav_link__icon" src="/static/img/heart.svg">
+            <a class = "nav_link" href = "#">Wish List</a>
+        </li>
+        <li class="">
+            <img class="nav_link__icon" src="/static/img/icon_lock.svg">
+            <a class = "nav_link" href = "#">Change password</a>
+        </li>
+    </ul>
+
+    <div class="dash__logout">
+        <img class="nav_link__icon" src="/static/img/arrow_carrot_right.svg">
+        <a class = "nav_link" href = "#">
+            logout
+        </a>
+    </div>
+</nav>

@@ -1,0 +1,17 @@
+
+<div class='filter'>
+    <form method="get" class='filter-form'>
+        {% for field in filter.form %}
+        {{field}}
+        {% endfor %}
+        <button class='active_btn'>Filter</button>
+        {% comment %} <input type="submit" name='filter' /> {% endcomment %}
+    </form>
+</div>
+    
+<script>
+
+    document.getElementById('id_name__icontains').placeholder ='Product name';
+    document.getElementById('id_price__lt').placeholder ='Price less than';
+    document.getElementById('id_price__gt').placeholder ='Price greader than';
+</script>

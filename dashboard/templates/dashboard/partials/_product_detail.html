@@ -1,0 +1,39 @@
+<section class="product_detail_section">
+
+    <div class="product_detail">
+        <div class="product_image" >
+            
+            {% if main_image.file_url %}
+            <img class="product_detail_image" src="{{main_image.file_url}}" alt="{{product.name}}">
+            {% endif %}
+
+            {% if gallery %}
+                <div class="gallery">
+                    {% for image in gallery %}
+                        <img class="product_detail_image_gallery" src="{{image.file_url}}" alt="{{product.name}}">
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+
+        <div class="product_detail_information">
+            <h4>{{product.category}}/<span>{{product.name}}</span></h4>
+            <h1 class="product_detail_name">{{product.name|title}}</h1>
+            <h3 class="product_detail_price">$ {{product.price}}</h3>
+            <h5 class="product_detail_category">Category:<span>{{product.product_type|upper}}</span></h5>
+            <p class="product_detail_plus">{{product.long_description|urlize}}
+            </p>
+            <form data-product-id = {{product.id}} data-product-name = {{product.name}} class="add_to_cart_btn user_input" action="{% url 'cart:add-to-cart'%}" method="POST">
+                {% csrf_token %}
+                <input type='number' min = 1 default=1 value=1 id="user_product_quantity">
+                <button class="btn">Add to cart</button>
+            </form>
+        </div>
+    </div>
+
+    <div class='staff_action'>
+        <a class='update_prod' href="{% url 'product:update-product' product.id %}">Update {{product.name}}</a>
+        <a class='remove_prod' href="{% url 'product:delete-product' product.id %}">Delete {{product.name}}</a>
+    </div>
+</section>

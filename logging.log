@@ -1,0 +1,214 @@
+10/29/2022 07:43:35 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/29/2022 07:43:50 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/29/2022 07:44:20 PM INFO: /home/patrice/dev/delivery/deliver/loggin_mixin.py changed, reloading. django.utils.autoreload
+10/29/2022 07:45:12 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/29/2022 07:45:38 PM INFO: /home/patrice/dev/delivery/deliver/loggin_mixin.py changed, reloading. django.utils.autoreload
+10/29/2022 07:45:43 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/29/2022 07:45:54 PM INFO: /home/patrice/dev/delivery/deliver/loggin_mixin.py changed, reloading. django.utils.autoreload
+10/29/2022 07:49:04 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/29/2022 07:49:18 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/29/2022 07:49:34 PM INFO: /home/patrice/dev/delivery/deliver/loggin_mixin.py changed, reloading. django.utils.autoreload
+10/29/2022 07:50:04 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/29/2022 07:51:45 PM INFO: /home/patrice/dev/delivery/deliver/loggin_mixin.py changed, reloading. django.utils.autoreload
+10/29/2022 07:52:37 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/29/2022 07:52:44 PM INFO: /home/patrice/dev/delivery/deliver/loggin_mixin.py changed, reloading. django.utils.autoreload
+10/29/2022 07:52:51 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/29/2022 07:53:41 PM INFO: /home/patrice/dev/delivery/deliver/loggin_mixin.py changed, reloading. django.utils.autoreload
+10/29/2022 07:53:46 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/29/2022 07:53:53 PM INFO: /home/patrice/dev/delivery/deliver/loggin_mixin.py changed, reloading. django.utils.autoreload
+10/29/2022 07:53:56 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/29/2022 07:56:59 PM INFO: /home/patrice/dev/delivery/deliver/loggin_mixin.py changed, reloading. django.utils.autoreload
+10/29/2022 07:59:49 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/29/2022 08:03:27 PM INFO: /home/patrice/dev/delivery/deliver/loggin_mixin.py changed, reloading. django.utils.autoreload
+10/29/2022 08:04:21 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/29/2022 08:04:21 PM ERROR: Internal Server Error: /search/ django.request
+Traceback (most recent call last):
+  File "/home/patrice/dev/ven/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/patrice/dev/ven/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/patrice/dev/delivery/product/views.py", line 20, in search
+    sys_loggin('debug',True, msg)
+  File "/home/patrice/dev/delivery/deliver/loggin_mixin.py", line 33, in sys_loggin
+    delete_unused('logging.log')
+  File "/home/patrice/dev/delivery/deliver/loggin_mixin.py", line 63, in delete_unused
+    ma = re.search(reg, lines)
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or bytes-like object
+10/29/2022 08:04:51 PM INFO: /home/patrice/dev/delivery/deliver/loggin_mixin.py changed, reloading. django.utils.autoreload
+10/29/2022 08:05:31 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/29/2022 08:05:45 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/30/2022 08:59:39 AM DEBUG: tttttttttttt deliver.loggin_mixin
+10/30/2022 08:59:40 AM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 08:59:43 AM DEBUG: tttttttttttt deliver.loggin_mixin
+10/30/2022 08:59:45 AM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 08:59:51 AM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 09:00:06 AM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 09:00:30 AM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 09:00:36 AM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 09:01:03 AM DEBUG: STREAM b'IHDR' 16 13 PIL.PngImagePlugin
+10/30/2022 09:01:03 AM DEBUG: STREAM b'sBIT' 41 4 PIL.PngImagePlugin
+10/30/2022 09:01:03 AM DEBUG: b'sBIT' 41 4 (unknown) PIL.PngImagePlugin
+10/30/2022 09:01:03 AM DEBUG: STREAM b'tEXt' 57 25 PIL.PngImagePlugin
+10/30/2022 09:01:03 AM DEBUG: STREAM b'tEXt' 94 40 PIL.PngImagePlugin
+10/30/2022 09:01:03 AM DEBUG: STREAM b'IDAT' 146 8192 PIL.PngImagePlugin
+10/30/2022 09:01:03 AM DEBUG: Importing BlpImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing BmpImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing BufrStubImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing CurImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing DcxImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing DdsImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing EpsImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing FitsImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing FitsStubImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing FliImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing FpxImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Image: failed to import FpxImagePlugin: No module named 'olefile' PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing FtexImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing GbrImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing GifImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing GribStubImagePlugin PIL.Image
+10/30/2022 09:01:03 AM DEBUG: Importing Hdf5StubImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing IcnsImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing IcoImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing ImImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing ImtImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing IptcImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing JpegImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing Jpeg2KImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing McIdasImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing MicImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Image: failed to import MicImagePlugin: No module named 'olefile' PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing MpegImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing MpoImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing MspImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing PalmImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing PcdImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing PcxImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing PdfImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing PixarImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing PngImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing PpmImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing PsdImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing SgiImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing SpiderImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing SunImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing TgaImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing TiffImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing WebPImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing WmfImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing XbmImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing XpmImagePlugin PIL.Image
+10/30/2022 09:01:04 AM DEBUG: Importing XVThumbImagePlugin PIL.Image
+10/30/2022 09:01:06 AM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 09:01:10 AM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 09:01:27 AM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 09:01:32 AM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 09:02:39 AM ERROR: Internal Server Error: /action/cart-action/ django.request
+Traceback (most recent call last):
+  File "/home/patrice/dev/ven/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/patrice/dev/ven/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/patrice/dev/delivery/cart/views.py", line 122, in cart_action
+    return JsonResponse({'quantity':quantity, 'price': price, 'cart_total': 0, 'cart_sub_total': cart.cart_total_cost}, status = 200)
+UnboundLocalError: local variable 'price' referenced before assignment
+10/30/2022 09:02:52 AM WARNING: Forbidden (CSRF token missing.): /action/cart/ django.security.csrf
+10/30/2022 09:04:04 AM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 09:04:22 AM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 09:05:06 AM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 09:05:56 AM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 05:53:45 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/30/2022 05:53:47 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 05:54:08 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/30/2022 05:54:10 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 05:54:12 PM DEBUG: tttttttttttt deliver.loggin_mixin
+10/30/2022 05:54:13 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 05:54:44 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 05:54:46 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 05:54:51 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 05:58:47 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:00:56 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:05:22 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:05:58 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:06:01 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:06:21 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:06:35 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:07:19 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:07:54 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:08:03 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:08:05 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:08:11 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:08:13 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:08:19 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:08:44 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:09:27 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:10:11 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:10:26 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:10:59 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:11:02 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:11:50 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:12:16 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:12:33 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:13:09 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:13:17 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:13:37 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:13:44 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:14:13 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:14:20 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:15:25 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:15:47 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:15:59 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:16:03 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:16:14 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:16:40 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:40:14 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:40:34 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:41:49 PM WARNING: Not Found: /favicon.ico django.request
+10/30/2022 06:43:51 PM INFO: /home/patrice/dev/delivery/product/views.py changed, reloading. django.utils.autoreload
+10/31/2022 02:08:31 PM INFO: iphone was deleted by ok@gmail.com deliver.loggin_mixin
+10/31/2022 02:08:33 PM WARNING: Not Found: /favicon.ico django.request
+10/31/2022 02:08:42 PM WARNING: Not Found: /favicon.ico django.request
+10/31/2022 02:08:52 PM WARNING: Not Found: /favicon.ico django.request
+10/31/2022 02:08:57 PM INFO: apple laptop for us was deleted by ok@gmail.com deliver.loggin_mixin
+10/31/2022 02:08:59 PM WARNING: Not Found: /favicon.ico django.request
+10/31/2022 02:09:58 PM WARNING: Not Found: /favicon.ico django.request
+10/31/2022 02:10:02 PM WARNING: Not Found: /favicon.ico django.request
+10/31/2022 02:10:08 PM WARNING: Not Found: /favicon.ico django.request
+10/31/2022 02:10:17 PM WARNING: Not Found: /favicon.ico django.request
+10/31/2022 02:11:42 PM WARNING: Not Found: /favicon.ico django.request
+10/31/2022 02:15:10 PM INFO: /home/patrice/dev/delivery/product/views.py changed, reloading. django.utils.autoreload
+10/31/2022 02:16:00 PM INFO: moon light for us was updated by ok@gmail.com product.loggin_mixin
+10/31/2022 02:16:02 PM WARNING: Not Found: /favicon.ico django.request
+10/31/2022 02:26:19 PM INFO: /home/patrice/dev/delivery/authapp/views.py changed, reloading. django.utils.autoreload
+10/31/2022 02:35:41 PM INFO: ok@gmail.com logging product.loggin_mixin
+10/31/2022 02:35:44 PM WARNING: Not Found: /favicon.ico django.request
+10/31/2022 02:44:58 PM INFO: /home/patrice/dev/delivery/cart/views.py changed, reloading. django.utils.autoreload
+10/31/2022 02:48:49 PM INFO: clothes for us was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 02:49:09 PM INFO: clothes for us was deleted in the cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 08:21:19 PM INFO: clothes was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 08:26:06 PM INFO: Block note was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 08:27:06 PM INFO: Block note was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 08:27:17 PM INFO: Block note was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 08:29:12 PM INFO: Block note was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 08:29:27 PM INFO: Block note was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 08:29:53 PM INFO: Block note was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 08:40:04 PM INFO: Block note was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 08:40:36 PM INFO: moon light for us was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 08:45:45 PM INFO: watch laptop was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 08:47:24 PM INFO: clothes was deleted in the cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 08:51:00 PM INFO: clothes for us was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 08:52:52 PM INFO: moon light for us was deleted in the cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+10/31/2022 08:53:05 PM INFO: watch laptop was deleted in the cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+11/01/2022 11:31:36 AM INFO: laptop was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+11/01/2022 11:36:51 AM WARNING: Forbidden (CSRF token missing.): /action/cart/ django.security.csrf
+11/01/2022 11:40:10 AM INFO: /home/patrice/dev/delivery/product/loggin_mixin.py changed, reloading. django.utils.autoreload
+11/01/2022 12:54:39 PM INFO: moon light for us was updated by ok@gmail.com product.loggin_mixin
+11/01/2022 12:55:07 PM INFO: /home/patrice/dev/delivery/product/filters.py changed, reloading. django.utils.autoreload
+11/02/2022 12:41:15 PM INFO: clothes was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+11/02/2022 12:42:50 PM INFO: /home/patrice/dev/delivery/product/views.py changed, reloading. django.utils.autoreload
+11/02/2022 02:39:46 PM INFO: watch laptop was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+11/02/2022 02:40:56 PM INFO: watch laptop was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+11/02/2022 02:42:59 PM INFO: watch laptop was added to cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
+11/02/2022 02:43:38 PM INFO: clothes was deleted in the cart ok@gmail.com2 by ok@gmail.com product.loggin_mixin
