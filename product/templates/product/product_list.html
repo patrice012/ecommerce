@@ -3,16 +3,28 @@
 {% load static %}
 
 {% block content %}
+
 <section class='list_product top_product'>
+
+    {% include 'product/_filter.html' %}
+
+    {% if product_list %}
     <h4 class = "little_title" >Top Selling</h4>
     <h3 class="section_title">Top Products</h3>
     <div class="divider"></div>
 
-    <div class="product_section">
-    {% for product in product_list %}
-        {% include 'product/_product_list.html' %}
-    {% endfor %}
+        <div class="product_section">
+        {% for product in product_list %}
+            {% include 'product/_product_list.html' %}
+        {% endfor %}
+        </div>
+    {% else %}
+    <div class="empty-list">
+        <p>
+            <span>Nothing</span> was found.
+        </p>
     </div>
+    {% endif %}
 </section>
 {% include 'product/_paginator.html' %}
 {% endblock content %}

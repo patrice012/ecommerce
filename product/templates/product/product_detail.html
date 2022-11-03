@@ -34,24 +34,12 @@
             <h3 class="product_detail_price">$ {{product.price}}</h3>
             <h5 class="product_detail_category">Category:<span>{{product.product_type|upper}}</span></h5>
             <p class="product_detail_plus">{{product.long_description|urlize}}
-
-              
             </p>
-
-            {% comment %} <div class="add_to_cart"> {% endcomment %}
-                {% comment %} <form class='user_input' action="." method="POST" name="product_number">
-
-                    <input type='number'>
-                </form> {% endcomment %}
-                {% comment %} <span class="product_total">{{product.quantity_in_stock}}</span> {% endcomment %}
-
             <form data-product-id = {{product.id}} data-product-name = {{product.name}} class="add_to_cart_btn user_input" action="{% url 'cart:add-to-cart'%}" method="POST">
                 {% csrf_token %}
                 <input type='number' min = 1 default=1 value=1 id="user_product_quantity">
                 <button class="btn">Add to cart</button>
             </form>
-                {% comment %} <button class="active_btn"> Add to cart </button> {% endcomment %}
-            {% comment %} </div> {% endcomment %}
         </div>
     </div>
 

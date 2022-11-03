@@ -6,6 +6,7 @@ from django.shortcuts import redirect, get_object_or_404, render
 from django.http import HttpResponse, JsonResponse
 from django.contrib.auth.decorators import login_required
 
+from product.loggin_mixin import sys_loggin
 from product.models import Product
 from .models import Cart, CartItem
 
@@ -81,6 +82,9 @@ def add_to_cart(request):
             transaction_id = timezone.now()
             cart = Cart(cart_user = user, transaction_id = transaction_id )
             cart.cartitem_set.add(cart_item)
+
+        msg = f'{product} was added to cart {cart} by {user}'
+        sys_loggin('info',True, msg)
         # except:
 
     # context = {
@@ -110,6 +114,8 @@ def cart_action(request):
 
                 else:
                     cart_item.product_quantity = 0
+                    msg = f'{cart_item} was deleted in the cart {cart} by {request.user}'
+                    sys_loggin('info',True, msg)
                     cart_item.delete()
                     cart.save()
             # 

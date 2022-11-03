@@ -30,6 +30,7 @@ class UserCreationForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         # self.fields['username'].widget.attrs.update(
         #         {'class':'form-control','placeholder':"Username"})
+        # print(self.fields['email'])
         self.fields['email'].widget.attrs.update(
                 {'class':'form-control',
                 'placeholder':"Email"})

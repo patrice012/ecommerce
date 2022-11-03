@@ -1,13 +1,13 @@
 //  DASHBOARD MENU SHOW ON TABLETE AND MODILE
 
-const dashBtn = document.querySelector(".dash__box");
+const dashboardBtn = document.querySelector(".dash__box");
 const dashMenu = document.querySelector(".side__navbar");
 const dashContent = document.querySelector(".dashboard__content");
 
-if (dashBtn) {
-  dashBtn.addEventListener("click", (e) => {
+if (dashboardBtn) {
+  dashboardBtn.addEventListener("click", (e) => {
     dashMenu.classList.toggle("active");
-    dashBtn.classList.toggle("active");
+    dashboardBtn.classList.toggle("active");
     // dashContent.classList.toggle("active");
   });
 }

@@ -11,53 +11,9 @@
 
 
 <div class="dashboard__content">
-    <div class="dash__content">
-        <div class="profile_detail">
-            <h2>Billing</h2>
-            <h4>Order History</h4>
-            <p>Manage billing information view receips</p>
+    <div class="dash__content" id="dash__content">
 
-            <div class="user_cart">
-                <div class="item">
-                    <div>Date</div>
-                    <div>Product</div>
-                    <div>Price</div>
-                    <div>Quantity</div>
-                    <div>State</div>
-                    <div>Overview</div>
-                </div>
-                <div class='item_detail'>
-                    {% for item in cart_item %}
-                    <div class="user_item">
-                        <div>{{item.create|date:"d M Y"}} at {{item.create|time:"H:i"}}</div>
-                        <div>{{item.product}}</div>
-                        <div>$ {{item.cart_item_total_cost}}</div>
-                        <div>{{item.product_quantity}}</div>
-                        <div>{{item.cart_item_state}}</div>
-                        <div><img src="{{item.product.image_url}}"></div>
-                    </div>
-                    {% endfor %}
-                    {% include 'product/_paginator.html' %}
-                </div>
-            </div>
-
-
-
-        </div>
-
-        <div class="profile_detail">
-            <h4>Payment Method</h4>
-            <p>Manage billing information view receips</p>
-
-            <div class="payment_type">
-                <img class="payment_img" src="{% static 'img/cardbg.png' %}">
-                <h4>Visa ending in 2225</h4>
-                <div class="payment_action">
-                    <button class="remove">Remove</button>
-                    <button class="update">Update</button>
-                </div>
-            </div>
-        </div>
+        {% include 'dashboard/partials/_account_detail.html' %}
 
     </div>
 </div>

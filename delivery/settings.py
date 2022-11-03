@@ -28,6 +28,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # third party app
+    'django_filters',
+    'stripe',
+
     # local application
     # 'deliver',
     'authapp',

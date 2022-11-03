@@ -26,6 +26,29 @@
     height: 30px;
 }
 
+// empty product list
+
+.empty-list {
+    width: 60vw;
+    margin: 0 auto;
+    color: $black-color;
+    display: flex;
+    word-spacing: .6rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    // border: 1px solid red;
+    min-height: 50vh;
+}
+
+.empty-list  span {
+    font-size: 1.6rem;
+    color: $blue-pure;
+    font-weight: 600;
+    // border: 1px solid blue;
+}
+
 // .page_state {
 //     align-self: center;
 // }

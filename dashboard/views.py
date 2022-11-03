@@ -3,7 +3,9 @@ from django.core.paginator import Paginator
 from django.http import HttpResponse
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
+from django.views.generic import DeleteView, DetailView, ListView,UpdateView
 
+from product.models import Product
 from cart.models import Cart, CartItem
 from .models import Profile
 from .forms import UpdateProfileForm
@@ -24,7 +26,7 @@ def profile(request):
         'user':user,
         'profile':user_profile
     }
-    return render(request, 'dashboard/profile.html', context)
+    return render(request, 'dashboard/partials/_profile.html', context)
 
 @login_required
 def dashboard(request):
@@ -64,3 +66,13 @@ def update_profile(request):
         'form':form
     }
     return render(request, 'dashboard/update_profile.html', context)
+
+
+class ProductList(ListView):
+    model = Product
+    template_name = 'dashboard/partials/_product_list.html'
+    paginate_by = 9
+
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = "dashboard/partials/_product_detail.html"

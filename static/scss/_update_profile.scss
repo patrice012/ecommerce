@@ -1,14 +1,15 @@
 
 .profile_information {
-    width: 60vw;
     height: auto;
     margin: 0 auto;
+    width: calc(40vw - 20px);
 }
 
 
 .profile_information > form {
-    width: 100%;
-    // min-height: auto;
+    // width: 100%;
+    min-height: auto;
+    @extend %smooth_fading;
 }
 
 .profile__form {

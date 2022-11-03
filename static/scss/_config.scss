@@ -17,6 +17,7 @@ li {
 a {
     text-decoration: none;
     color: $black-color;
+    cursor: pointer;
 }
 
 body {
@@ -29,6 +30,68 @@ body {
     margin: 20px auto 10px auto;
     border-bottom: 2px solid $blue-pure;
     border-radius: 10px;
+}
+
+.min_height {
+    min-height: calc(100% - 10vh);
+}
+
+.filter {
+    width: 60vw;
+    margin: 2rem auto;
+
+}
+
+@media screen and (max-width:$tablete-size) {
+    .filter {
+        width: 80vw;
+    }
+}
+
+.filter-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-form > button {
+    border: none;
+}
+
+.filter-form > input {
+    border: 1px solid $blue-pure;
+    height: 2.2rem;
+    width: 20%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    // margin: 0rem 1rem;
+}
+
+.filter-form > input:focus {
+    border: 1px solid red;
+}
+
+.filter-form > input::placeholder {
+    color: $black-color;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width:$mobile-size) {
+    .filter {
+        width: 100%;
+    }
+
+    .filter-form {
+        flex-direction: column;
+    }
+
+    .filter-form > input {
+        width: 80%;
+        margin: .6rem 0rem;
+    }
 }
 
 button {
@@ -77,6 +140,8 @@ input[type="submit"] {
     border-radius: 10px;
     cursor: pointer;
 }
+
+
 
 // @media (max-width:1080px) {
 //     button {

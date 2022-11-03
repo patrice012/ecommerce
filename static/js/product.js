@@ -38,7 +38,21 @@ function changeProductImage(e) {
     e.target.classList.remove("active_img");
   },
   1000)
+}
 
+//  delete product action
+
+let delProduct = document.querySelector('.remove_prod');
+console.log(delProduct)
+if (delProduct) {
+  delProduct.addEventListener('click', confirm_delete)
+}
+
+function confirm_delete(e) {
+  if ( !confirm('This product would be deleted. Confirm?')) {
+    e.preventDefault()
+    console.log('event')
+  }
 }
 
 

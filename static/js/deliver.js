@@ -9,6 +9,11 @@ mobilMenu.addEventListener('click', (e) => {
     mobilNav.classList.toggle('active')
 })
 
+//  footer date
+let date = new Date()
+console.log(date)
+document.getElementById('date').innerHTML = `${date.getFullYear()}`
+
 
 //  search part
 const search = document.querySelector(".search");
@@ -31,10 +36,10 @@ const searchMsgText = document.querySelector(".msg__modal__content");
 
 if (searchContainer) {
     if (searchContainer.childElementCount === 0) {
-        searchContainer.hidden = true;
+        // searchContainer.hidden = true;
         searchMsgModal.style.display = "block";
         searchMsgText.textContent =
-        "Ooops! Nothing was found. Try again we other keyword.";
+        "Ooops! Nothing was found. Try again with other keyword.";
       setTimeout(() => {
         searchMsgModal.style.display = "none";
       }, 3000);
@@ -69,11 +74,6 @@ window.addEventListener('scroll', () => {
         Array.from(navLink).forEach(link => {
             link.classList.add('scroll')
         })
-        mobilMenu.style.border = "1px solid black";
-        
-        Array.from(lignes).forEach((ligne) => {
-            ligne.style.color = "black";
-        });
         userStateFunc();
     }
     else {
@@ -82,11 +82,11 @@ window.addEventListener('scroll', () => {
             link.classList.remove("scroll");
         });
 
-        mobilMenu.style.border = "1px solid white";
+        // mobilMenu.style.border = "1px solid white";
 
-        Array.from(lignes).forEach((ligne) => {
-            ligne.style.color = "white";
-        });
+        // Array.from(lignes).forEach((ligne) => {
+        //     ligne.style.color = "white";
+        // });
 
         // profileIcon.src = "/static/img/moncomptemobile.png";
         userStateFunc();
@@ -121,13 +121,13 @@ const headerText = document.querySelectorAll(".header_text");
 const bg = document.getElementsByTagName('header');
 
 document.addEventListener('DOMContentLoaded', () => {
-    // let load = 0;
-    // let int = setInterval(blurring, 10);
+
     blurring();
 })
 
+// console.log(window.onload, 'onload');
 let load = 0;
-let int = setInterval(blurring, 5);
+let int = setInterval(blurring, 3);
 
 function blurring() {
     load++;
