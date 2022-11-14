@@ -21,5 +21,4 @@ class ProductFilter(django_filters.FilterSet):
         # @property
         # def qs(self):
         #     parent_qs = super().qs
-        #     # author = getattr(self.request, 'user', None)
         #     return parent_qs.filter(available=True)

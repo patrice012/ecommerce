@@ -111,7 +111,7 @@ function is_login_user() {
   }
 }
 
-// request cart item number in the database set inetval 1000ms
+// request cart item number in the database set interval 1000ms
 const userCartNumber = document.querySelector(".cart_item_number");
 const cartOverView = document.querySelector(".cart__overview");
 
@@ -119,7 +119,7 @@ const get_cart_items_number = () => {
   let interva = setInterval(cart_items, 500);
   setTimeout(() => {
     clearInterval(interva);
-  }, 3000);
+  }, 1000);
 };
 
 const cart_items = () => {

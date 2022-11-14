@@ -1,15 +1,14 @@
 from django.db import models
+from django.db.models import Q
 
 
 class ProductManager(models.Manager):
     def get_queryset(self):
-        return super().get_queryset().filter(available= True)
-
+        return super().get_queryset().filter(Q(available=True) and Q(is_deleted=False))
 
 # class ProductManager(models.Manager):
 #     def get_queryset(self):
 #         return super().get_queryset().filter(available= True)
-
 
 
 # class ProductQuerySet(models.QuerySet):

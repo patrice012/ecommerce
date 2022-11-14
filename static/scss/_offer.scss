@@ -1,0 +1,71 @@
+/* -------- OFFER SECTION ------------- */
+
+.offer-section {
+  width: 100%;
+  margin: 6rem 0rem;
+  height: 240px;
+
+
+}
+
+.offer {
+  margin: 1rem auto;
+  display: grid;
+  width: 80vw;
+  grid-template-columns: 2fr 1fr;
+  // @extend %contaner-shadow;
+  // border: 1px solid $black-color;
+  
+}
+
+
+.offer > a {
+  display: inline-block;
+  margin: 0;
+}
+.offer img {
+//   background-color: var(--dark-color);
+  padding: 0rem 3rem;
+  margin: 0;
+  width: 100%;
+  height: 240px;
+}
+
+.offer-description {
+  background-color: #7eecf611;
+  padding: 0 1rem;
+  text-align: start;
+  max-height: 100%;
+}
+.offer-description .offer-title {
+//   color: var(--second-color);
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 1.5rem 0 0.5rem 0;
+}
+.offer-description .offer-hook {
+//   color: var(--second-color-alt);
+  font-size: 1.2rem;
+}
+.offer-description .cart-btn {
+  cursor: pointer;
+//   color: var(--second-color-alt);
+  font-size: 1.1rem;
+  display: grid;
+  place-items: center;
+  margin: 2rem 0 1rem 0;
+  width: 10rem;
+  height: 3rem;
+//   background-image: linear-gradient(
+//     to top,
+//     var(--primary-color-alt),
+//     var(--primary-color)
+//   );
+}
+// .offer-description .cart-btn:hover {
+//   background-image: linear-gradient(
+//     to bottom,
+//     var(--primary-color-alt),
+//     var(--primary-color)
+//   );
+// }

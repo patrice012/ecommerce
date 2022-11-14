@@ -43,7 +43,6 @@ function changeProductImage(e) {
 //  delete product action
 
 let delProduct = document.querySelector('.remove_prod');
-console.log(delProduct)
 if (delProduct) {
   delProduct.addEventListener('click', confirm_delete)
 }

@@ -16,14 +16,8 @@
         
 
         <div class="product_action">
-            {% comment %} <form data-product-id = {{product.id}} data-product-name = {{product.name}} class="add_to_cart_btn" action="{% url 'cart:add-to-cart'%}" method="POST">
-                {% csrf_token %}
-                <button class="btn">Add to cart</button>
-            </form> {% endcomment %}
-
             <a href="{{product.get_absolute_url}}" class="link_btn">View Product
             </a>
-            {% comment %} <button class="btn">View Product</button> {% endcomment %}
         </div>
     </div>
 

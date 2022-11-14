@@ -13,6 +13,6 @@ app_name = "cart"
 urlpatterns = [
     path('i/', cart_item, name="cart-item"), 
     path('cart-action/', cart_action, name="cart_action"),
-    path('cart/', cart, name ='cart'),
+    path('cart/', cart, name='cart'),
     path('add/', add_to_cart, name="add-to-cart"),
 ]

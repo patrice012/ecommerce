@@ -1,0 +1,20 @@
+<section class="offer-section">
+    <div class="offer offer-1">
+        <a href="{{offer.get_absolute_url}}">
+            {% if offer.image_url %}
+            <img class="product_list_image" class='offer-img offer-1-img' src="{{offer.image_url}}" alt = 'product name'>
+            {% endif %}
+        </a>
+        {% comment %} <img src="{{product}}" alt="a computer in dark with with white shadow" class="offer-img offer-1-img"> {% endcomment %}
+        <div class="offer-description offer-desc-1">
+            <h2 class="offer-title">{{offer.name|title}}</h2>
+            <h3 class="product_price">$ {{offer.price}}</h3>
+            <p class="offer-hook">{{offer.long_description|urlize|truncatechars:20}}</p>
+            {% comment %} <div class="cart-btn">ADD TO CART</div> {% endcomment %}
+            <div class="product_action">
+                <a href="{{product.get_absolute_url}}" class="link_btn">View Product
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
